@@ -1,8 +1,12 @@
 {
   "name": "rollup-plugin-bytenode",
   "version": "0.1.0-alpha.0",
-  "description": "Rollup plugin for compile Nodejs code to bytenode",
+  "description": "Rollup plugin for compile javascript code to byte code",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
   "scripts": {
     "test": "jest"
   },
