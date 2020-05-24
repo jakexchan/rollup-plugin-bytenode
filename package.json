@@ -1,0 +1,33 @@
+{
+  "name": "rollup-plugin-bytenode",
+  "version": "0.1.0-alpha.0",
+  "description": "Rollup plugin for compile Nodejs code to bytenode",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakexchan/rollup-plugin-bytenode.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "bytenode",
+    "nodejs"
+  ],
+  "author": "Jake Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakexchan/rollup-plugin-bytenode/issues"
+  },
+  "homepage": "https://github.com/jakexchan/rollup-plugin-bytenode#readme",
+  "dependencies": {
+    "bytenode": "^1.1.6"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "rollup": "^2.10.8",
+    "rollup-plugin-terser": "^6.0.1"
+  }
+}
