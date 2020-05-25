@@ -9,9 +9,10 @@ function isCjs (format) {
 export default function bytenode (pluginOptions = {}) {
   return {
     name: 'bytenode',
-    async writeBundle (options, bundle) {
+    async writeBundle (options) {
       const { file, format } = options;
-      const targetFile = resolve(__dirname, file);
+      const targetFile = resolve(file);
+
       const compileAsModule = isCjs(format);
 
       // only support CommonJS

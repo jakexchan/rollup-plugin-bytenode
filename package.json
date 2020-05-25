@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-bytenode",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Rollup plugin for compile javascript code to byte code",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
