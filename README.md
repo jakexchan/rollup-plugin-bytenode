@@ -1,6 +1,6 @@
 # rollup-plugin-bytenode
 
-[Rollup](https://github.com/rollup/rollup) plugin for compile file to byte code. Use [bytenode](https://github.com/OsamaAbbas/bytenode) compiler.
+[Rollup](https://github.com/rollup/rollup) plugin for compile JavaScript file to byte code. Use [bytenode](https://github.com/OsamaAbbas/bytenode) compiler.
 
 ## Install
 
@@ -15,10 +15,9 @@ yarn add rollup-plugin-bytenode --save-dev
 rollup.config.js
 
 ```js
-const rollup = require('rollup');
-const rollupPluginBytenode = require('rollup-plugin-bytenode');
+import bytenode from 'rollup-plugin-bytenode';
 
-rollup({
+export default {
   input: 'main.js',
   output: [
     {
@@ -27,11 +26,11 @@ rollup({
     }
   ],
   plugins: [
-    rollupPluginBytenode()
+    bytenode()
   ]
-})
+}
 ```
 
 ## License
 
-Copyright (c) [jakexchan](https://github.com/jakexchan)
+MIT License Copyright (c) [jakexchan](https://github.com/jakexchan)

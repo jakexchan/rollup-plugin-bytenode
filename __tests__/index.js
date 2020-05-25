@@ -3,24 +3,24 @@ const path = require('path');
 
 const { rollup } = require('rollup');
 const { terser } = require('rollup-plugin-terser');
-const rollupPluginBytenode = require('../');
+const bytenode = require('../');
 
 test('Output compile file', async () => {
   const bundle = await rollup({
     input: 'examples/test-case.js',
     output: [
       {
-        file: 'dist/test-case.js',
+        file: 'examples/dist/test-case.js',
         format: 'cjs'
       }
     ],
     plugins: [
       terser(),
-      rollupPluginBytenode()
+      bytenode()
     ]
   });
-  await bundle.write({ file: 'dist/test-case.js', format: "cjs" });
-  const compileFile = path.resolve(__dirname, '../dist/test-case.jsc');
+  await bundle.write({ file: '../examples/dist/test-case.js', format: "cjs" });
+  const compileFile = path.resolve(__dirname, '../examples/dist/test-case.jsc');
   expect(fs.existsSync(compileFile)).toBeTruthy();
 });
 

@@ -1,14 +1,18 @@
 {
   "name": "rollup-plugin-bytenode",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Rollup plugin for compile javascript code to byte code",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "files": [
-    "index.js",
-    "README.md"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "rollup -c -w",
+    "build": "npm run test && rollup -c"
   },
   "repository": {
     "type": "git",
@@ -29,9 +33,12 @@
   "dependencies": {
     "bytenode": "^1.1.6"
   },
+  "peerDependencies": {
+    "rollup": "^2.0.0"
+  },
   "devDependencies": {
     "jest": "^26.0.1",
-    "rollup": "^2.10.8",
+    "rollup": "^2.10.9",
     "rollup-plugin-terser": "^6.0.1"
   }
 }
