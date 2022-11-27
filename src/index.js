@@ -19,7 +19,8 @@ export default function bytenode (pluginOptions = {}) {
       if (compileAsModule) {
         bytenodeCore.compileFile({
           filename: targetFile,
-          compileAsModule
+          compileAsModule,
+          electron: pluginOptions.electron || false
         });
       }
     }
